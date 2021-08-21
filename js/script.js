@@ -21,6 +21,9 @@ const operation = (billAmount = 0, selectTip = 0, numberofPeople = 0) =>{
 const bill = document.querySelector('#bill')
 bill.addEventListener('input',(e)=>{
     inputsValidation()
+    if (bill.value == '') {
+        document.querySelector('#bill-validation').classList.remove('bill-validation-error')
+    }
 })
 bill.addEventListener('blur', (e)=>{
     inputsValidation()
@@ -61,8 +64,11 @@ buttons.addEventListener('click',(e)=>{
 
 const customTip = document.querySelector('#custom-tip')
 customTip.addEventListener('input',(e)=>{
-    selectTipValue = parseInt(e.target.value)/100
-    inputsValidation(selectTipValue)
+        selectTipValue = parseInt(e.target.value)/100
+        inputsValidation(selectTipValue)
+        if (customTip == ''){
+            inputsValidation(0)
+        }
 })
 
 // people
@@ -73,6 +79,9 @@ people.addEventListener('input',(e)=>{
     } else {
         inputsValidation(parseInt(customTip.value)/100)
     }
+    if (people.value == '') {
+        document.querySelector('#people-validation').classList.remove('people-validation-error')
+    }
 })
 people.addEventListener('blur', ()=>{
     inputsValidation()
@@ -82,7 +91,6 @@ people.addEventListener('blur', ()=>{
     }
 })
 people.addEventListener('focus', ()=>{
-    // console.log('focus')
     people.classList.add('input-active')
     document.querySelector('#people-validation').classList.remove('people-validation-error')
 })
@@ -105,14 +113,10 @@ const inputsValidation = (tipvalue)=>{
             // bill.classList.remove('input-error')
             // document.querySelector('#bill-validation').classList.remove('bill-validation-error')
         } else {
-            // bill.classList.remove('input-error')
-            // document.querySelector('#bill-validation').classList.remove('bill-validation-error')
-            // people.classList.remove('input-error')
-            // document.querySelector('#people-validation').classList.remove('people-validation-error')
-
             let result = operation(billvalue,tipvalue,peopleValue)
             renderResult(result)
         }
+
     }
 }
 // render result
