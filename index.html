@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 750px)">
-    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 1000px)">
 </head>
 <body>
     <div class="container">
@@ -43,22 +43,24 @@
                 </div>
             </form>
             <div class="result-card">
-                <div class="result-card__tip-amount">
-                    <div class="result-card__total-tip-amount">
-                        <p>Tip Amount</p>
-                        <span>/ person</span>
+                <div>
+                    <div class="result-card__tip-amount">
+                        <div class="result-card__total-tip-amount">
+                            <p>Tip Amount</p>
+                            <span>/ person</span>
+                        </div>
+                        <div class="result-amount  result-card-total-tip" id="result-card-total-tip">
+                            $0.00
+                        </div>
                     </div>
-                    <div class="result-amount  result-card-total-tip" id="result-card-total-tip">
-                        $0.00
-                    </div>
-                </div>
-                <div class="result-card__total">
-                    <div class="result-card__total-person-amount">
-                        <p>Total</p>
-                        <span>/ person</span>
-                    </div>
-                    <div class="result-amount result-cardt-total" id="result-cardt-total">
-                        $0.00
+                    <div class="result-card__total">
+                        <div class="result-card__total-person-amount">
+                            <p>Total</p>
+                            <span>/ person</span>
+                        </div>
+                        <div class="result-amount result-cardt-total" id="result-cardt-total">
+                            $0.00
+                        </div>
                     </div>
                 </div>
                 <button class="button-reset" id="button-reset">Reset</button>
