@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 750px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 1024px)">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="./images/logo.svg" alt="Logo">
+        </div>
+        <div class="card-box">
+            <form class="form-app" id="form-app">
+                <div class="form-app__group-bill">
+                    <label for="bill" >Bill</label>
+                    <span class="bill-validation" id="bill-validation">Can't be zero</span>
+                    <input class="input-bill" type="number" id="bill" name="bill" placeholder="0.00">
+                </div>
+                <div class="form-app__grup-select-tip">
+                    <label for="custom-tip">Select Tip</label>
+                    <div class="select-tip__buttons" id="select-tip__buttons">
+                        <button type="button" id="tip-5" name="tip-5">5%</button>
+                        <button type="button" id="tip-10" name="tip-10">10%</button>
+                        <button type="button" id="tip-15" name="tip-15">15%</button>
+                        <button type="button" id="tip-25" name="tip-25">25%</button>
+                        <button type="button" id="tip-50" name="tip-50">50%</button>
+                        <input class="select-tip-custom" type="text" placeholder="Custom" id="custom-tip" name="custom-tip">
+                    </div>
+                </div>
+                <div class="form-app__group-people">
+                    <label for="people">Number of people</label>
+                    <span class="people-validation" id="people-validation">Can't be zero</span>
+                    <input class="number-of-people" type="number" placeholder="0" id="people" name="people">
+                </div>
+            </form>
+            <div class="result-card">
+                <div class="result-card__tip-amount">
+                    <div class="result-card__total-tip-amount">
+                        <p>Tip Amount</p>
+                        <span>/ person</span>
+                    </div>
+                    <div class="result-amount  result-card-total-tip" id="result-card-total-tip">
+                        $0.00
+                    </div>
+                </div>
+                <div class="result-card__total">
+                    <div class="result-card__total-person-amount">
+                        <p>Total</p>
+                        <span>/ person</span>
+                    </div>
+                    <div class="result-amount result-cardt-total" id="result-cardt-total">
+                        $0.00
+                    </div>
+                </div>
+                <button class="button-reset" id="button-reset">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
