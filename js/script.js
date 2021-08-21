@@ -116,7 +116,6 @@ const inputsValidation = (tipvalue)=>{
             let result = operation(billvalue,tipvalue,peopleValue)
             renderResult(result)
         }
-
     }
 }
 // render result
